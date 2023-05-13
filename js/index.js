@@ -63,6 +63,17 @@ $(document).ready(function(){
     let result = $(this).attr("data-alt");
     $(".tabcnts .tabs").removeClass("active");
     $("#" + result).addClass("active").hide().fadeIn(); 
-  
   });
+
+    /* 스크롤 */
+    $(".top-btn").hide();
+    $(function(){
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 1200){
+          $(".top-btn").fadeIn();
+			}else {
+				$('.top-btn').fadeOut();
+        }
+      });    
+    });
 });
